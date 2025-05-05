@@ -52,3 +52,9 @@ export default tseslint.config({
   },
 })
 ```
+
+
+FE. Організація проєкту по гілках і поради
+git rm -r --cached .idea/
+git add -u .idea/
+git commit -m "Removed .idea directory"
