@@ -9,11 +9,13 @@
 // export default MyComponent
 
 import type {FC} from "react";
+import styles from './MyComponent.module.css'
+
 type MyComponentPropType = { text: string }
 
-const MyComponent:FC<MyComponentPropType> = ({text}) => {
+const MyComponent: FC<MyComponentPropType> = ({text}) => {
     return (
-        <div>
+        <div className={styles.target}>
             {text}
         </div>
     );
