@@ -58,3 +58,13 @@ FE. Організація проєкту по гілках і поради
 git rm -r --cached .idea/
 git add -u .idea/
 git commit -m "Removed .idea directory"
+
+FE. Tailwind
+Була проблема з помилкою при npm run dev
+
+Вирішеня
+Завантаж та встанови цей дистрибутив. 
+В 4й версіі на вінді вона вимагає цю штуку
+
+Інсталював
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
