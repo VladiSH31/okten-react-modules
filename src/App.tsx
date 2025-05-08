@@ -1,19 +1,25 @@
 import './App.css'
-import {coursesTitleArray} from "./data/coursesTitleArray.tsx";
+import {coursesAndDurationArray} from "./data/coursesAndDuration.tsx";
+import MyCoursesAndDuration from "./components/my-courses/MyCoursesAndDuration.tsx";
 
 function App() {
     return (
+
         <>
-            {
-                coursesTitleArray.map((title: string, index) =>
-                    <div  key={index}>
-                        <h2 key={index} className="text-4xl text-cyan-800 border-2 border-solid border-cyan-400 mt-1 text-center">{title}</h2>
-                    </div>
-                )
 
+            <div className="flex justify-center items-center h-screen">
+                <div className="grid grid-cols-2 gap-10 justify-center items-center">
+                    {
+                        coursesAndDurationArray.map((value, index) =>
+
+                            <MyCoursesAndDuration key={index} course={value}/>
+                        )
+
+                    }
+                </div>
+            </div>
+            </>
+            )
             }
-        </>
-    )
-}
 
-export default App
+            export default App
