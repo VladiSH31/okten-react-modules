@@ -1,25 +1,13 @@
 import './App.css'
-import {coursesAndDurationArray} from "./data/coursesAndDuration.tsx";
-import MyCoursesAndDuration from "./components/my-courses/MyCoursesAndDuration.tsx";
+import MyFamilyComponent from "./components/my-simps-component/family-component/MyFamilyComponent.tsx";
+
 
 function App() {
     return (
-
         <>
+            <MyFamilyComponent/>
+        </>
+    )
+}
 
-            <div className="flex justify-center items-center h-screen">
-                <div className="grid grid-cols-2 gap-10 justify-center items-center">
-                    {
-                        coursesAndDurationArray.map((value, index) =>
-
-                            <MyCoursesAndDuration key={index} course={value}/>
-                        )
-
-                    }
-                </div>
-            </div>
-            </>
-            )
-            }
-
-            export default App
+export default App
