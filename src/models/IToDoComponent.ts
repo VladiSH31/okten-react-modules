@@ -1,6 +1,6 @@
 export interface IToDoComponent {
   userId: number;
   id: number;
-  title: string;
+  todo: string;
   completed: boolean;
 }
