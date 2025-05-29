@@ -58,3 +58,9 @@ export default tseslint.config({
 2. У routes додати ще один path з елементои PostPage, як children UsersComponent щоб відображався на UsersComponent. 
 Outlet також додати на самій сторінці UserCOmponent.
 3. У самому path додати params. щоб потім вичавити його у useParams
+4. Формуємо в сервісах Posts service and urls:
+-getAllPostsUsersById
+-urls AllPosts, byId, userPostsById
+5. Формуємо IPost модель
+6. Після на PostPage створити useEffect та запустити getAllPostsUsersById та передати itemId з useParams / через перевірку.
+7. В useEffect у депс передати itemId
