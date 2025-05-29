@@ -52,3 +52,9 @@ export default tseslint.config({
   },
 })
 ```
+
+
+1. У UserComponent, для button у navigate треба змінити шлях/to в данному випадку 'posts/' + item.id
+2. У routes додати ще один path з елементои PostPage, як children UsersComponent щоб відображався на UsersComponent. 
+Outlet також додати на самій сторінці UserCOmponent.
+3. У самому path додати params. щоб потім вичавити його у useParams
