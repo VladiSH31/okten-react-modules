@@ -11,7 +11,7 @@ const UserComponent: FC<UserProps> = ({item}) => {
 
     const navigation = useNavigate();
     const handleOnClick = () => {
-        navigation('details', {state: item})
+        navigation('posts/' + item.id, {state: item})
     }
 
     return (
