@@ -8,6 +8,12 @@ export const urls = {
         }
     },
     posts: {
-
+        allUsers: baseUrls + '/posts',
+        byId: (id: number) => {
+            return baseUrls + '/' + id;
+        },
+        userPostById: (id: number) => {
+            return baseUrls + '/posts?userId=' + id;
+        }
     }
 }
