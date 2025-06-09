@@ -8,7 +8,7 @@ const PostsPage = () => {
 
     return (
         <div>
-            {userId && <UserPostsComponent userId={userId}/>}
+            {userId && <UserPostsComponent userId={userId}/>};
         </div>
     );
 };
