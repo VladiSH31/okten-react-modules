@@ -1,0 +1,26 @@
+@import "tailwindcss";
+/*@tailwind utilities;*/
+
+/* Контейнер меню */
+.menu-container {
+    @apply bg-gray-100 p-4 rounded-lg shadow-md;
+}
+
+/* Список (горизонтальний рядок) */
+.menu-list {
+    @apply flex space-x-4;
+}
+
+/* Посилання */
+.menu-link {
+    @apply text-blue-500 font-semibold hover:text-blue-700 transition duration-300;
+}
+
+/* Ефект для пунктів меню (li) */
+.menu-item {
+    @apply p-2 rounded-lg transition duration-300;
+}
+
+.menu-item:hover {
+    @apply bg-gray-200 shadow-lg;
+}

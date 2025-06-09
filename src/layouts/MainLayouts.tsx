@@ -5,7 +5,7 @@ const MainLayouts = () => {
     return (
         <div>
             <Menu/>
-            <hr/>
+
             <Outlet/>
         </div>
     );
