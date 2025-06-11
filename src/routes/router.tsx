@@ -12,10 +12,22 @@ export const router = createBrowserRouter([
         path: '/', element: <MainLayouts/>,
         children: [
             {index: true, element: <HomePage/>},
-            {path: 'users', element: <UsersPage/>},
-            {path: 'posts', element: <PostsPage/>},
-            {path: 'comments', element: <CommentsPage/>},
-            {path: 'products', element: <ProductsPage/>}
+            {path: 'users', element: <UsersPage/>, children: [
+                    {path: 'jsonplaceholder', element: <UsersJsonplaceholderPage/>},
+                    {path: 'dummyjson', element: <UsersDummyjsonPage/>}
+                ]},
+            {path: 'posts', element: <PostsPage/>, children: [
+                    {path: 'jsonplaceholder', element: <PostsJsonplaceholderPage/>},
+                    {path: 'dummyjson', element: <PostsDummyjsonPage/>}
+                ]},
+            {path: 'comments', element: <CommentsPage/>, children: [
+                    {path: 'jsonplaceholder', element: <CommentsJsonplaceholderPage/>},
+                    {path: 'dummyjson', element: <CommentsDummyjsonPage/>}
+                ]},
+            {path: 'products', element: <ProductsPage/>, children: [
+                    {path: 'jsonplaceholder', element: <ProductsJsonplaceholderPage/>},
+                    {path: 'dummyjson', element: <ProductsDummyjsonPage/>}
+                ]}
         ]
     },
 
