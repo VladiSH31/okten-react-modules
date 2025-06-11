@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Контейнер сторінки */
+.users-page-container {
+    @apply bg-gray-50 min-h-screen p-6;
+}
+
+/* Контейнер для блоків */
+.users-blocks-container {
+    @apply space-y-4;
+}
+
+/* Окремий блок */
+.users-block {
+    @apply bg-gray-100 p-4 rounded-lg shadow-md transition duration-300;
+}
+
+.users-block:hover {
+    @apply bg-gray-200 shadow-lg;
+}
+
+/* Посилання в блоці */
+.users-block-link {
+    @apply text-blue-500 font-semibold hover:text-blue-700 transition duration-300;
+}
+
+/* Контейнер для контенту */
+.content-container {
+    @apply mt-6;
+}
