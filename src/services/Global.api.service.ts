@@ -1,12 +1,11 @@
 import {baseUrls} from "../urls/urls.ts";
-import type {IUserJSONPlaceHolder} from "../models/users/jsonplaceholder/IUserJSONPlaceHolder.ts";
 
-export const getJSONPlaceHolder = async (endpoint: string):Promise<IUserJSONPlaceHolder[]> => {
+export const getJSONPlaceHolder = async<T, > (endpoint: string):Promise<T> => {
     return await fetch(baseUrls.jsonPlaceHolder + endpoint)
         .then((response) => response.json())
 }
 
-export const getDummyJson = async (endpoint: string) => {
+export const getDummyJson = async<T, > (endpoint: string):Promise<T> => {
     return await fetch(baseUrls.dummyJson + endpoint)
         .then((response) => response.json())
 }

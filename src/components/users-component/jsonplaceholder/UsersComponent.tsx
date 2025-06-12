@@ -4,10 +4,11 @@ import type {IUserJSONPlaceHolder} from "../../../models/users/jsonplaceholder/I
 import {getJSONPlaceHolder} from "../../../services/Global.api.service.ts";
 import UserComponent from "../../user-component/jsonplaceholder/UserComponent.tsx";
 
+
 const UsersComponent = () => {
     const [users, setUsers] = useState<IUserJSONPlaceHolder[]>([])
     useEffect(() => {
-        getJSONPlaceHolder('users')
+        getJSONPlaceHolder<IUserJSONPlaceHolder[]>('users')
             .then(response => setUsers(response));
     }, []);
 

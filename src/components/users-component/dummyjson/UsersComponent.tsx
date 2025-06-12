@@ -3,11 +3,13 @@ import {useEffect, useState} from "react";
 import type {IUserDummyjson} from "../../../models/users/dummyjson/IUserDummyjson.ts";
 import {getDummyJson} from "../../../services/Global.api.service.ts";
 import UserComponent from "../../user-component/dummyjson/UserComponent.tsx";
+import type {IBaseResponseModel} from "../../../models/IBaseResponseModel.ts";
 
 const UsersComponent = () => {
     const [users, setUsers] = useState<IUserDummyjson[]>([])
     useEffect(() => {
-        getDummyJson('users').then(response => setUsers(response))
+        getDummyJson<IBaseResponseModel & {users: IUserDummyjson[]}>('users')
+            .then(({ users }) => setUsers(users))
     }, []);
 
 

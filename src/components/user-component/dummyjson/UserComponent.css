@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Загальний стиль картки */
+.user-dummy-card {
+    @apply bg-white shadow-md rounded-lg p-6 mb-4;
+}
+
+/* Заголовок */
+.user-dummy-header h2 {
+    @apply text-xl font-bold text-gray-800;
+}
+
+.user-dummy-header p {
+    @apply text-sm text-gray-500;
+}
+
+.user-dummy-header img {
+    @apply w-16 h-16 rounded-full mr-4;
+}
+
+/* Основна інформація */
+.user-dummy-info p {
+    @apply text-gray-700;
+}
+
+.user-dummy-info span {
+    @apply font-semibold;
+}
+
+/* Адреса */
+.user-dummy-address h3,
+.user-dummy-company h3,
+.user-dummy-bank h3,
+.user-dummy-crypto h3 {
+    @apply text-lg font-semibold text-gray-800;
+}
+
+.user-dummy-address p,
+.user-dummy-company p,
+.user-dummy-bank p,
+.user-dummy-crypto p {
+    @apply text-gray-700;
+}
