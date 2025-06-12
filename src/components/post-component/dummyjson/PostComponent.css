@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Контейнер для списку постів */
+.posts-container {
+    @apply bg-gray-50 min-h-screen p-6;
+}
+
+/* Сітка для постів */
+.posts-container > div {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}

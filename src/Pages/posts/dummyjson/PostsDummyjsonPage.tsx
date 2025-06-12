@@ -1,8 +1,9 @@
+import PostsComponent from "../../../components/posts-component/dummyjson/PostsComponent.tsx";
 
 const PostsDummyjsonPage = () => {
     return (
         <div>
-            PostsDummyjsonPage
+            <PostsComponent/>
         </div>
     );
 };
