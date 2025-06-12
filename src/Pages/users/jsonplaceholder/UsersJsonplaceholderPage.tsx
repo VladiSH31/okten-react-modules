@@ -1,8 +1,9 @@
+import UsersComponent from "../../../components/users-component/jsonplaceholder/UsersComponent.tsx";
 
 const UsersJsonplaceholderPage = () => {
     return (
         <div>
-            UsersJsonplaceholderPage
+            <UsersComponent/>
         </div>
     );
 };
