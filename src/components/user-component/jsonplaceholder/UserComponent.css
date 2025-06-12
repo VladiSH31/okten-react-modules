@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Загальний стиль картки */
+.user-card {
+    @apply bg-gray-100 shadow-md rounded-lg p-6 mb-4;
+}
+
+/* Заголовок */
+.user-header h2 {
+    @apply text-xl font-bold text-gray-800;
+}
+
+.user-header p {
+    @apply text-sm text-gray-500;
+}
+
+/* Основна інформація */
+.user-info p {
+    @apply text-gray-700;
+}
+
+.user-info span {
+    @apply font-semibold;
+}
+
+/* Адреса */
+.user-address h3,
+.user-company h3 {
+    @apply text-lg font-semibold text-gray-800;
+}
+
+.user-address p,
+.user-company p {
+    @apply text-gray-700;
+}
