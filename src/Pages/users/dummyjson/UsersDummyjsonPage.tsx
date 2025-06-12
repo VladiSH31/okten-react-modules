@@ -1,8 +1,9 @@
+import UsersComponent from "../../../components/users-component/dummyjson/UsersComponent.tsx";
 
 const UsersDummyjsonPage = () => {
     return (
         <div>
-            UsersDummyjsonPage
+            <UsersComponent/>
         </div>
     );
 };
