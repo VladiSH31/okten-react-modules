@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Картка коментаря */
+.comment-card {
+    @apply bg-white shadow-md rounded-lg p-6 mb-4;
+}
+
+/* Заголовок */
+.comment-card h2 {
+    @apply text-lg font-bold text-gray-800 mb-2;
+}
+
+/* Текст мета-інформації */
+.comment-card p {
+    @apply text-sm text-gray-500 mb-2;
+}
+
+/* Основний текст */
+.comment-card p:last-child {
+    @apply text-gray-700;
+}
