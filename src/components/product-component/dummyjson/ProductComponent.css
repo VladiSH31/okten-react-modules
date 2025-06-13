@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Картка продукту */
+.product-card {
+    @apply bg-white shadow-md rounded-lg p-6 mb-4 transition-shadow duration-200 hover:shadow-lg;
+}
+
+/* Контейнер для зображення */
+.product-image {
+    width: 100%;
+    height: 192px; /* 12rem = 192px */
+    object-fit: contain !important;
+    object-position: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* Обмеження тексту */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Секція ціни */
+.price-section {
+    @apply border-t border-gray-100 pt-3;
+}
+
+/* Додаткова інформація */
+.additional-info {
+    @apply border-t border-gray-100 pt-3;
+}
