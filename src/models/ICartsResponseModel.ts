@@ -4,5 +4,5 @@ export interface ICartsResponseModel {
     total: number,
     skip: number,
     limit: number,
-    users: ICartModel[]
+    carts: ICartModel[]
 }

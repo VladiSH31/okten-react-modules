@@ -12,14 +12,15 @@ export const userService = {
 }
 }
 
-export const cartsService = {
+export const cartService = {
     async getAllCarts():Promise<ICartsResponseModel> {
         return await fetch(baseUrl+ '/carts')
             .then(res => res.json())
 
     },
-    async getCartsById(id:number):Promise<ICartsResponseModel> {
-        return await fetch(baseUrl + '/carts/user/' + id)
+    async getCartsById(userId:string):Promise<ICartsResponseModel> {
+
+        return await fetch(baseUrl + '/carts/user/' + userId)
             .then(res => res.json())
     }
 }
