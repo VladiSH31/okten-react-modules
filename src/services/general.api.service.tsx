@@ -14,7 +14,7 @@ export const userService = {
 
 export const cartsService = {
     async getAllCarts():Promise<ICartsResponseModel> {
-        return await fetch(baseUrl+ '/cartss')
+        return await fetch(baseUrl+ '/carts')
             .then(res => res.json())
 
     },
