@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+/* Глобальний reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Основні елементи */
+html, body, #root {
+    background-color: #0f172a !important; /* slate-900 */
+    color: #e2e8f0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Прибираємо білі фони */
+*, div, main, section {
+    background-color: transparent !important;
+}
+
+/* Контейнери сторінок */
+.page-container, .users-container, .posts-container, .comments-container, .products-container, .carts-container {
+    background-color: #0f172a !important;
+    padding: 24px;
+    min-height: 100vh;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    color: #f1f5f9 !important;
+    margin-bottom: 16px;
+}
+
+/* Кнопки */
+button {
+    background-color: #0f766e !important;
+    color: #f0fdfa !important;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #14b8a6 !important;
+}
+
+/* Посилання */
+a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #f0fdfa;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .page-container, .users-container, .posts-container, .comments-container, .products-container, .carts-container {
+        padding: 16px;
+    }
+}

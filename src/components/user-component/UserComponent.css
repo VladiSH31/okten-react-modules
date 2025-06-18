@@ -1,0 +1,99 @@
+/* Картка користувача */
+.user-card {
+    background-color: #1e293b; /* slate-800 */
+    border: 1px solid #0f766e; /* teal-700 */
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #14b8a6; /* teal-500 */
+    transform: translateY(-2px);
+}
+
+/* Інформація користувача */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Ім'я користувача */
+.user-name {
+    color: #f1f5f9; /* slate-100 */
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Деталі користувача */
+.user-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Email користувача */
+.user-email {
+    color: #94a3b8; /* slate-400 */
+    font-size: 14px;
+    flex: 1;
+}
+
+/* Кнопка */
+.user-button {
+    background-color: #0f766e; /* teal-700 */
+    color: #f0fdfa; /* teal-50 */
+    border: 1px solid #0f766e;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.user-button:hover {
+    background-color: #14b8a6; /* teal-500 */
+    border-color: #14b8a6;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-button:active {
+    transform: translateY(0);
+}
+
+/* Адаптивність */
+@media (max-width: 640px) {
+    .user-card {
+        padding: 16px;
+    }
+
+    .user-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .user-button {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .user-name {
+        font-size: 16px;
+    }
+
+    .user-email {
+        font-size: 13px;
+    }
+}

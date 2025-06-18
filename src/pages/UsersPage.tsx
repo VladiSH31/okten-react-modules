@@ -5,7 +5,6 @@ export function UsersPage() {
     return (
         <div>
             <Outlet/>
-            <hr/>
             <UsersComponent/>
         </div>
     );
