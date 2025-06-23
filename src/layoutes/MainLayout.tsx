@@ -1,11 +1,11 @@
 import PaginationComponent from "../components/PaginationComponent.tsx";
-import SomeComponent from "../components/SomeComponent.tsx";
+import UsersComponent from "../components/UsersComponent.tsx";
 
 
 const MainLayout = () => {
     return (
         <div>
-            <SomeComponent/>
+            <UsersComponent/>
             Main Layout
             <PaginationComponent/>
         </div>
