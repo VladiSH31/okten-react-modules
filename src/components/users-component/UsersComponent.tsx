@@ -6,10 +6,12 @@ import UserComponent from "../user-component/UserComponent.tsx";
 
 const UsersComponent = () => {
     const [users, setUsers] = useState<IUser[]>([])
-    const [query, setQuery] = useSearchParams();
+    const [query] = useSearchParams({page: '1'});
 
     useEffect(() => {
-        getUsers()
+        const currentPage = query.get('page') || '1';
+
+        getUsers(currentPage)
             .then(value => setUsers(value.users))
     }, [query]);
 
