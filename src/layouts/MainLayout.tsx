@@ -5,7 +5,7 @@ const MainLayout = () => {
     return (
         <div>
             <MenuComponent/>
-            Main Layout
+
             <Outlet/>
         </div>
     );

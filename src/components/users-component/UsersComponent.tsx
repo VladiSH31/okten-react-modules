@@ -17,10 +17,10 @@ const UsersComponent = () => {
 
 
     return (
-        <div>
-            {
-                users.map(value => <UserComponent key={value.id} item={value}/>)
-            }
+        <div className="users-page">
+            <div className="grid gap-4">
+                {users.map(value => <UserComponent key={value.id} item={value}/>)}
+            </div>
         </div>
     );
 };

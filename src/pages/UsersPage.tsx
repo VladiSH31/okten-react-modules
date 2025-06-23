@@ -3,10 +3,12 @@ import PaginationComponent from "../components/pagination-component/PaginationCo
 
 const UsersPage = () => {
     return (
-        <div>
+
+        <div className="pb-8 users-page">
             <UsersComponent/>
             <PaginationComponent/>
         </div>
+
     );
 };
 
