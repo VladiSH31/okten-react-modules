@@ -1,12 +1,13 @@
 import './App.css'
+import FormComponent from "./components/form-component/FormComponent.tsx";
 
 function App() {
 
-  return (
-    <>
-
-    </>
-  )
+    return (
+        <>
+            <FormComponent/>
+        </>
+    )
 }
 
 export default App
