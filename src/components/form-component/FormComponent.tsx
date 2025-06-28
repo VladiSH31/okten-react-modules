@@ -1,4 +1,4 @@
-import  './FormComponent.css'
+import './FormComponent.css'
 import {useForm} from "react-hook-form";
 
 interface IFormProps {
@@ -17,13 +17,29 @@ const FormComponent = () => {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit(customHandler)}>
-                <label>ID:<input type="text" {...register('id')}/></label>
-                <label>Brand:<input type="text" {...register('brand')}/></label>
-                <label>Price:<input type="text" {...register('price')}/></label>
-                <label>Year:<input type="text" {...register('year')}/></label>
-                <button>Send</button>
+        <div className="form-container"><h2 className="form-title">Add New Car</h2>
+            <form className="car-form" onSubmit={handleSubmit(customHandler)}>
+                <div className="form-group"><label className="form-label">Car ID</label> <input className="form-input"
+                                                                                                type="number"
+                                                                                                placeholder="Enter ID"
+                                                                                                {...register('id')}          />
+                </div>
+                <div className="form-group"><label className="form-label">Brand</label> <input className="form-input"
+                                                                                               type="text"
+                                                                                               placeholder="Enter car brand (e.g., BMW, Mercedes)"
+                                                                                               {...register('brand')}          />
+                </div>
+                <div className="form-group"><label className="form-label">Price</label> <input className="form-input"
+                                                                                               type="number"
+                                                                                               placeholder="Enter price in USD"
+                                                                                               {...register('price')}          />
+                </div>
+                <div className="form-group"><label className="form-label">Year</label> <input className="form-input"
+                                                                                              type="number"
+                                                                                              placeholder="Enter manufacturing year"
+                                                                                              {...register('year')}          />
+                </div>
+                <button className="submit-button" type="submit"> ✨ Add Car</button>
             </form>
         </div>
     );
