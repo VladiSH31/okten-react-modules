@@ -1,5 +1,6 @@
 import './FormComponent.css'
 import {useForm} from "react-hook-form";
+import {saveCars} from "../../services/cars.service.ts";
 
 interface IFormProps {
     id: number;
@@ -13,17 +14,17 @@ const FormComponent = () => {
 
 
     const customHandler = (formDataValue: IFormProps) => {
-        console.log(formDataValue);
+        saveCars(formDataValue).then(value => console.log(value))
     };
 
     return (
         <div className="form-container"><h2 className="form-title">Add New Car</h2>
             <form className="car-form" onSubmit={handleSubmit(customHandler)}>
-                <div className="form-group"><label className="form-label">Car ID</label> <input className="form-input"
-                                                                                                type="number"
-                                                                                                placeholder="Enter ID"
-                                                                                                {...register('id')}          />
-                </div>
+                {/*<div className="form-group"><label className="form-label">Car ID</label> <input className="form-input"*/}
+                {/*                                                                                type="number"*/}
+                {/*                                                                                placeholder="Enter ID"*/}
+                {/*                                                                                {...register('id')}          />*/}
+                {/*</div>*/}
                 <div className="form-group"><label className="form-label">Brand</label> <input className="form-input"
                                                                                                type="text"
                                                                                                placeholder="Enter car brand (e.g., BMW, Mercedes)"
