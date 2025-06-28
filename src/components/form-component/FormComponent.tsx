@@ -10,7 +10,7 @@ interface IFormProps {
 }
 
 const FormComponent = () => {
-    const {handleSubmit, register} = useForm<IFormProps>();
+    const {handleSubmit, register, formState: {errors, isValid}} = useForm<IFormProps>({mode:'all'});
 
 
     const customHandler = (formDataValue: IFormProps) => {
@@ -25,22 +25,28 @@ const FormComponent = () => {
                 {/*                                                                                placeholder="Enter ID"*/}
                 {/*                                                                                {...register('id')}          />*/}
                 {/*</div>*/}
-                <div className="form-group"><label className="form-label">Brand</label> <input className="form-input"
+                <div className="form-group"><label className="form-label">Brand<input className="form-input"
                                                                                                type="text"
                                                                                                placeholder="Enter car brand (e.g., BMW, Mercedes)"
                                                                                                {...register('brand')}          />
+                    {errors.brand && errors.brand.message}
+                </label>
                 </div>
-                <div className="form-group"><label className="form-label">Price</label> <input className="form-input"
+                <div className="form-group"><label className="form-label">Price <input className="form-input"
                                                                                                type="number"
                                                                                                placeholder="Enter price in USD"
                                                                                                {...register('price')}          />
+                    {errors.price && errors.price.message}
+                </label>
                 </div>
-                <div className="form-group"><label className="form-label">Year</label> <input className="form-input"
+                <div className="form-group"><label className="form-label">Year <input className="form-input"
                                                                                               type="number"
                                                                                               placeholder="Enter manufacturing year"
                                                                                               {...register('year')}          />
+                    {errors.year && errors.year.message}
+                </label>
                 </div>
-                <button className="submit-button" type="submit"> ✨ Add Car</button>
+                <button className="submit-button" type="submit" disabled={!isValid}> ✨ Add Car</button>
             </form>
         </div>
     );
