@@ -25,9 +25,11 @@ export const login = async ({username, password, expiresInMins}: LoginData): Pro
     return userWithTokens;
 }
 
-
+//     Викликаємо перехват
 axiosInstance.interceptors.request.use((request) => {
+    //     Якщо метод відповідає гет - метод вказується в верхньому регістрі
     if (request.method?.toUpperCase() === 'GET') {
+        //     додаємо хедер авторізейшен
         request.headers.Authorization = 'Bearer ' + retriveLocalStorage<IUserWithTokens>('user').accessToken;
         //     обов'язково пробіл після 'Bearer '
     }
@@ -42,15 +44,18 @@ export const loadAuthResources = async (): Promise<IProducts[]> => {
 }
 
 export const refresh = async () => {
-
+//     витягуємо юзера з його токенами
     const IUserWithTokens =retriveLocalStorage<IUserWithTokens>('user');
+    //     робимо пост запит з рефреш токеном, передаючи рефрештокен і час, отримуємо нову пару токенів
     const {data: {accessToken, refreshToken}}= await axiosInstance.post<ITokenPairs>('/refresh', {
         refreshToken: IUserWithTokens.refreshToken,
         expiresInMins: 1
     });
     console.log(accessToken);
     console.log(refreshToken);
+    //     Оновлюємо токени в юзері
     IUserWithTokens.accessToken = accessToken;
     IUserWithTokens.refreshToken = refreshToken;
+    //     і сетаємо юзера з оновленими токенами в локал сторедж
     localStorage.setItem('user', JSON.stringify(IUserWithTokens))
 }
