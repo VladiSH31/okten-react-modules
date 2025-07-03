@@ -1,9 +1,14 @@
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import UserComponent from "./UserComponent.tsx";
 
 
 const UsersComponent = () => {
     console.log('users');
+
+    const foo = useCallback(() => {
+        console.log('useCallback')
+    }, [])
+
     const [users, setUsers] = useState([]);
     useEffect(() => {
         fetch('https://dummyjson.com/users')
@@ -13,7 +18,7 @@ const UsersComponent = () => {
     return (
         <div>
             Users Component
-            <UserComponent/>
+            <UserComponent foo={foo}/>
 
         </div>
     );

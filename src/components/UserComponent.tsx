@@ -1,7 +1,10 @@
-import {memo} from "react";
+import {type FC, memo} from "react";
 
+type SomeProps={
+    foo: () => void
+}
 
-const UserComponent = memo(() => {
+const UserComponent:FC<SomeProps> = memo(() => {
     console.log('user');
 
     return (
