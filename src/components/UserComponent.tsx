@@ -2,16 +2,18 @@ import {type FC, memo} from "react";
 
 type SomeProps = {
     foo: () => void,
-    arr: number[]
+    arr: number[],
+    item: {name:string}
 }
 
-const UserComponent: FC<SomeProps> = memo(({arr}: SomeProps) => {
+const UserComponent: FC<SomeProps> = memo(({arr, item}: SomeProps) => {
     console.log('user');
     console.log(arr)
 
     return (
         <div>
-            User Component
+
+            <div>{item.name}</div>
         </div>
     );
 })
