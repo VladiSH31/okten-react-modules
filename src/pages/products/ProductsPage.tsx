@@ -1,9 +1,11 @@
 import './ProductsPage.css'
+import ProductsComponent from "../../components/products-component/ProductsComponent.tsx";
 
 const ProductsPage = () => {
     return (
         <div>
-            Products Page
+            <h1>Products Page</h1>
+            <ProductsComponent/>
         </div>
     );
 };
