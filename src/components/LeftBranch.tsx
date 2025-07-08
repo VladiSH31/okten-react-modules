@@ -1,7 +1,16 @@
 import LeftBranchA from "./LeftBranchA.tsx";
+import {useMemo} from "react";
 
 
 const LeftBranch = () => {
+
+    const iterMemo = useMemo(() => {
+        for (let i = 0; i < 1000; i++) {
+            console.log(i);
+        }
+        return null;
+    }, [])
+
     return (
         <div>
             Left Branch
