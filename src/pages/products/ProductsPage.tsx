@@ -4,7 +4,12 @@ import ProductsComponent from "../../components/products-component/ProductsCompo
 const ProductsPage = () => {
     return (
         <div>
-            <h1>Products Page</h1>
+            <div className="p-4">
+                <h1 className="text-2xl font-bold text-center mb-2">
+                    Products Page
+                </h1>
+            </div>
+
             <ProductsComponent/>
         </div>
     );
