@@ -1,1 +1,154 @@
 @import "tailwindcss";
+
+/* Базові стилі для світлої теми */
+.app.light {
+    background-color: #ffffff;
+    color: #1f2937;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Стилі для темної теми */
+.app.dark {
+    background-color: #1f2937;
+    color: #f9fafb;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Стилі для навігації - світла тема */
+.app.light nav {
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.app.light nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    margin: 0;
+}
+
+.app.light nav a {
+    color: #374151;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+}
+
+.app.light nav a:hover {
+    background-color: #e5e7eb;
+}
+
+/* Стилі для навігації - темна тема */
+.app.dark nav {
+    background-color: #374151;
+    border-bottom: 1px solid #4b5563;
+}
+
+.app.dark nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    margin: 0;
+}
+
+.app.dark nav a {
+    color: #f9fafb;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s;
+}
+
+.app.dark nav a:hover {
+    background-color: #4b5563;
+}
+
+/* Стилі для кнопки перемикача */
+.theme-toggle {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* Кнопка в світлій темі */
+.app.light .theme-toggle {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.app.light .theme-toggle:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Кнопка в темній темі */
+.app.dark .theme-toggle {
+    background-color: #fbbf24;
+    color: #1f2937;
+}
+
+.app.dark .theme-toggle:hover {
+    background-color: #f59e0b;
+    transform: translateY(-1px);
+}
+
+/* Стилі для контенту сторінок */
+.app.light .page-content {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+.app.dark .page-content {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+/* Стилі для карток/компонентів */
+.app.light .card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+}
+
+.app.dark .card {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    color: #f9fafb;
+}
+
+/* Стилі для інпутів */
+.app.light input {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #1f2937;
+}
+
+.app.light input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.app.dark input {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    color: #f9fafb;
+}
+
+.app.dark input:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.app.dark input::placeholder {
+    color: #9ca3af;
+}

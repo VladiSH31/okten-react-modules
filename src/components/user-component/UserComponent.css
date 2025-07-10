@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* UserComponent.css */
+
+.user-card {
+    @apply rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 border mb-4;
+}
+
+.user-card:hover {
+    @apply transform -translate-y-1;
+}
+
+/* Світла тема */
+.app.light .user-card {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+    color: #1f2937 !important;
+}
+
+/* Темна тема */
+.app.dark .user-card {
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    color: #f9fafb !important;
+}
+
+.user-header {
+    @apply flex justify-between items-start mb-4 pb-3 border-b;
+}
+
+/* Світла тема - заголовок */
+.app.light .user-header {
+    border-bottom-color: #e5e7eb !important;
+}
+
+/* Темна тема - заголовок */
+.app.dark .user-header {
+    border-bottom-color: #4b5563 !important;
+}
+
+.user-name {
+    @apply text-xl font-bold m-0;
+}
+
+/* Світла тема - ім'я */
+.app.light .user-name {
+    color: #1f2937 !important;
+}
+
+/* Темна тема - ім'я */
+.app.dark .user-name {
+    color: #f9fafb !important;
+}
+
+.user-id {
+    @apply text-sm font-medium px-2 py-1 rounded-full;
+}
+
+/* Світла тема - ID */
+.app.light .user-id {
+    color: #6b7280 !important;
+    background-color: #f3f4f6 !important;
+}
+
+/* Темна тема - ID */
+.app.dark .user-id {
+    color: #d1d5db !important;
+    background-color: #4b5563 !important;
+}
+
+.user-details {
+    @apply space-y-3;
+}
+
+.user-detail {
+    @apply flex items-center space-x-3 p-2 rounded-md transition-colors duration-200;
+}
+
+/* Світла тема - деталі */
+.app.light .user-detail:hover {
+    background-color: #f9fafb !important;
+}
+
+/* Темна тема - деталі */
+.app.dark .user-detail:hover {
+    background-color: #4b5563 !important;
+}
+
+.detail-icon {
+    @apply text-lg flex-shrink-0;
+}
+
+.detail-text {
+    @apply text-sm break-all;
+}
+
+/* Світла тема - текст */
+.app.light .detail-text {
+    color: #374151 !important;
+}
+
+/* Темна тема - текст */
+.app.dark .detail-text {
+    color: #d1d5db !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .user-card {
+        @apply p-4;
+    }
+
+    .user-header {
+        @apply flex-col items-start space-y-2;
+    }
+
+    .user-name {
+        @apply text-lg;
+    }
+}
