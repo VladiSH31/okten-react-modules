@@ -1,0 +1,11 @@
+import './UsersPage.css'
+
+const UsersPage = () => {
+    return (
+        <div>
+            Users Page
+        </div>
+    );
+};
+
+export default UsersPage;
