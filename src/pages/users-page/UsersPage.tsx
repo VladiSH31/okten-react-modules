@@ -5,7 +5,7 @@ import {usersSliceActions} from "../../redux/slices/user-slice/userSlice.tsx";
 import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
 
 const UsersPage = () => {
-    const {users} = useAppSelector(state => state.userSlice);
+    const {users, loadState} = useAppSelector(state => state.userSlice);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -15,6 +15,7 @@ const UsersPage = () => {
 
     return (
         <div>
+            {!loadState && <div>Loading...</div>}
             {
                 users.map(value => <div key={value.id}>{value.name}</div>)
             }
