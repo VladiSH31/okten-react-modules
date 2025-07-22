@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.main-layout {
+    @apply bg-gray-50 min-h-screen font-sans;
+}
+
+.main-content {
+    @apply p-4 sm:p-6 lg:p-8;
+}

@@ -1,11 +1,14 @@
 import {Outlet} from "react-router-dom";
 import MenuComponent from "../components/menu-components/MenuComponent.tsx";
+import './MainLayout.css';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="main-layout">
             <MenuComponent/>
-            <Outlet/>
+            <main className="main-content">
+                <Outlet/>
+            </main>
         </div>
     );
 };

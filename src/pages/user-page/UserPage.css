@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+.user-page-container {
+    @apply container mx-auto;
+}
+
+.back-link {
+    @apply inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300 mb-6;
+}
+
+.loading-text {
+    @apply text-center text-gray-500;
+}
+
+.user-details-card {
+    @apply bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto;
+}
+
+.user-details-name {
+    @apply text-4xl font-bold text-gray-900 mb-2;
+}
+
+.user-details-username {
+    @apply text-xl text-gray-600 mb-6;
+}
+
+.details-group {
+    @apply space-y-4;
+}
+
+.detail-item h3 {
+    @apply font-semibold text-gray-800;
+}
+
+.detail-item a {
+    @apply text-blue-500 hover:underline;
+}
+
+.detail-item p {
+    @apply text-gray-700;
+}

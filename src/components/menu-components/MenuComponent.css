@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+header {
+    @apply bg-white shadow-md;
+}
+
+nav {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+ul {
+    @apply flex items-center space-x-4 h-16 text-lg;
+}
+
+.normalLink {
+    @apply hover:text-blue-500 transition-colors duration-300;
+}
+
+.activeLink {
+    @apply text-blue-500 font-bold;
+}
