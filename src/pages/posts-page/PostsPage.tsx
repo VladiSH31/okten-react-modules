@@ -1,9 +1,11 @@
 import './PostsPage.css';
+import PostsComponent from "../../components/posts-component/PostsComponent.tsx";
 
 const PostsPage = () => {
     return (
         <div>
-            Posts Page
+            <h1>Posts Page</h1>
+            <PostsComponent/>
         </div>
     );
 };

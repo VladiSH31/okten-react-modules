@@ -7,8 +7,7 @@ export const store = configureStore({
     reducer: {
         userSlice: userSlice.reducer,
         postSlice: postSlice.reducer,
-        commentSlice: commentSlice.reducer,
-        // complexSlice: complexSlice.reducer
+        commentSlice: commentSlice.reducer
     }
 });
 
